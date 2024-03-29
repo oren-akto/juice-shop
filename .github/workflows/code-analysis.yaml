@@ -1,0 +1,20 @@
+name: "Run code analysis"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  code_analysis:
+    runs-on: ubuntu-latest
+    name: Run code analysis
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check out Git repository
+        run: |
+          docker run  -it --rm -v "$(pwd)":/usr/source_code \
+                  orenakto/akto-utils:latest cli extract \
+                    --AKTO_SYNC="true" \
+                    --AKTO_DASHBOARD_URL="http://localhost:9090" \
+                    --AKTO_API_KEY="w821qP1d6hEtUSGzmPE9BwjhcxMn0Uc6X5P8mTxv" \
+                    --IS_DOCKER="true" \
+                    --API_COLLECTION_NAME="juice_shop_demo"

@@ -11,6 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run code analysis
         run: |
+          docker ps -a
           docker run --rm -v "$(pwd)":/usr/source_code \
                   orenakto/akto-utils:latest cli extract \
                     --AKTO_SYNC="true" \

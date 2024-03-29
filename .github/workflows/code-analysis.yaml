@@ -11,10 +11,12 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run code analysis
         run: |
-          docker run --rm -v "$(pwd)":/usr/source_code \
-                  orenakto/akto-utils:latest cli extract \
-                    --AKTO_SYNC="true" \
-                    --AKTO_DASHBOARD_URL="http://localhost:9090" \
-                    --AKTO_API_KEY="w821qP1d6hEtUSGzmPE9BwjhcxMn0Uc6X5P8mTxv" \
-                    --IS_DOCKER="true" \
-                    --API_COLLECTION_NAME="juice_shop_demo" >> $GITHUB_OUTPUT
+          output=$(docker run --rm -v "$(pwd)":/usr/source_code \
+                    orenakto/akto-utils:latest cli extract \
+                      --AKTO_SYNC="true" \
+                      --AKTO_DASHBOARD_URL="http://localhost:9090" \
+                      --AKTO_API_KEY="w821qP1d6hEtUSGzmPE9BwjhcxMn0Uc6X5P8mTxv" \
+                      --IS_DOCKER="true" \
+                      --API_COLLECTION_NAME="juice_shop_demo")
+          echo "Docker run output:"
+          echo "$output"

@@ -9,9 +9,9 @@ jobs:
     name: Run code analysis
     steps:
       - uses: actions/checkout@v2
-      - name: Check out Git repository
+      - name: Run code analysis
         run: |
-          docker run  -it --rm -v "$(pwd)":/usr/source_code \
+          docker run --rm -v "$(pwd)":/usr/source_code \
                   orenakto/akto-utils:latest cli extract \
                     --AKTO_SYNC="true" \
                     --AKTO_DASHBOARD_URL="http://localhost:9090" \

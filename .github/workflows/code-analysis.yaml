@@ -14,7 +14,7 @@ jobs:
           docker run --rm -v "$(pwd)":/usr/source_code \
                  orenakto/akto-utils:latest cli extract \
                     --AKTO_SYNC="true" \
-                    --AKTO_DASHBOARD_URL="http://a8461c33bea9c479196f00b34509ebcf-9285dcb52d810f62.elb.ap-south-1.amazonaws.com:8080" \
+                    --AKTO_DASHBOARD_URL="http://a0e069e6fbc6d423da7cfafc05a602fa-185d242a0b83f61f.elb.ap-south-1.amazonaws.com:8080" \
                     --AKTO_API_KEY="MrhwsiZSbSjeOBYjOQkyBdDAeEm7LfzXvCoexjOn" \
                     --IS_DOCKER="true" \
                     --API_COLLECTION_NAME="juice_shop_demo" | sed 's/\x1B\[[0-9;]\{1,\}[A-Za-z]//g' >> $GITHUB_STEP_SUMMARY

@@ -1,3 +1,5 @@
+name: "Akto Code Analysis demo"
+
 on: 
   workflow_dispatch:
 

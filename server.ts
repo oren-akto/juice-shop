@@ -368,6 +368,14 @@ restoreOverwrittenFilesWithOriginals().then(() => {
   app.post('/api/Feedbacks', captcha.verifyCaptcha())
   app.post('/api/FeedbacksTest', captcha.verifyCaptcha())
   app.post('/api/FeedbacksTest2', captcha.verifyCaptcha())
+  app.post('/api/FeedbackAdmin', captcha.verifyCaptcha())
+  app.post('/api/BasketTest', captcha.verifyCaptcha())
+  app.delete('/api/CheckoutTest', captcha.verifyCaptcha())
+  app.put('/api/Inventory', captcha.verifyCaptcha())
+  app.post('/api/Cars', captcha.verifyCaptcha())
+  app.put('/api/UserAuth', captcha.verifyCaptcha())
+  app.put('/api/CaptchaAPI', captcha.verifyCaptcha())
+  app.post('/api/Products', captcha.verifyCaptcha())
   /* Captcha Bypass challenge verification */
   app.post('/api/Feedbacks', verify.captchaBypassChallenge())
   /* User registration challenge verifications before finale takes over */

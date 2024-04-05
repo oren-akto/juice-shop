@@ -619,6 +619,7 @@ restoreOverwrittenFilesWithOriginals().then(() => {
   /* Routes for profile page */
   app.get('/profile', security.updateAuthenticatedUsers(), userProfile())
   app.post('/profile', updateUserProfile())
+  app.post('/profiles', updateUserProfile())
 
   /* Route for vulnerable code snippets */
   app.get('/snippets', vulnCodeSnippet.serveChallengesWithCodeSnippet())

@@ -1,7 +1,12 @@
 name: "Akto Code Analysis demo"
 
-on: 
-  workflow_dispatch:
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   akto_code_analysis:

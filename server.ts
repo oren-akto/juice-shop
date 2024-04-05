@@ -367,6 +367,7 @@ restoreOverwrittenFilesWithOriginals().then(() => {
   /* Captcha verification before finale takes over */
   app.post('/api/Feedbacks', captcha.verifyCaptcha())
   app.post('/api/FeedbacksTest', captcha.verifyCaptcha())
+  app.post('/api/FeedbacksTest2', captcha.verifyCaptcha())
   /* Captcha Bypass challenge verification */
   app.post('/api/Feedbacks', verify.captchaBypassChallenge())
   /* User registration challenge verifications before finale takes over */

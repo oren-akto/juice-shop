@@ -366,6 +366,18 @@ restoreOverwrittenFilesWithOriginals().then(() => {
   app.post('/api/Feedbacks', verify.forgedFeedbackChallenge())
   /* Captcha verification before finale takes over */
   app.post('/api/Feedbacks', captcha.verifyCaptcha())
+  app.post('/api/FeedbacksTest', captcha.verifyCaptcha())
+  app.post('/api/FeedbacksTest2', captcha.verifyCaptcha())
+  app.post('/api/FeedbackAdmin', captcha.verifyCaptcha())
+  app.post('/api/BasketTest1', captcha.verifyCaptcha())
+  app.post('/api/BasketTest2', captcha.verifyCaptcha())
+  app.post('/api/BasketTest3', captcha.verifyCaptcha())
+  app.delete('/api/CheckoutTest', captcha.verifyCaptcha())
+  app.put('/api/Inventory', captcha.verifyCaptcha())
+  app.post('/api/Cars', captcha.verifyCaptcha())
+  app.put('/api/UserAuth', captcha.verifyCaptcha())
+  app.put('/api/CaptchaAPI', captcha.verifyCaptcha())
+  app.post('/api/Products', captcha.verifyCaptcha())
   /* Captcha Bypass challenge verification */
   app.post('/api/Feedbacks', verify.captchaBypassChallenge())
   /* User registration challenge verifications before finale takes over */
@@ -381,7 +393,8 @@ restoreOverwrittenFilesWithOriginals().then(() => {
     }
     next()
   })
-  app.post('/api/Users', verify.registerAdminChallenge())
+  app.post('/api/Users/', verify.registerAdminChallenge())
+  app.post('/api/UsersTest1/', verify.registerAdminChallenge())
   app.post('/api/Users', verify.passwordRepeatChallenge()) // vuln-code-snippet hide-end
   app.post('/api/Users', verify.emptyUserRegistration())
   /* Unauthorized users are not allowed to access B2B API */

@@ -394,7 +394,7 @@ restoreOverwrittenFilesWithOriginals().then(() => {
     next()
   })
   app.post('/api/Users/', verify.registerAdminChallenge())
-  app.post('/api/UsersTest/', verify.registerAdminChallenge())
+  app.post('/api/UsersTest1/', verify.registerAdminChallenge())
   app.post('/api/Users', verify.passwordRepeatChallenge()) // vuln-code-snippet hide-end
   app.post('/api/Users', verify.emptyUserRegistration())
   /* Unauthorized users are not allowed to access B2B API */

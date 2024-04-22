@@ -1,6 +1,7 @@
 name: "Akto Code Analysis demo"
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
@@ -18,8 +19,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Akto code analysis
-        uses: oren-akto/akto-code-analysis@v1
+        uses: akto-api-security/code-analysis-action@v1
         with:
-          AKTO_DASHBOARD_URL: 'http://a0e069e6fbc6d423da7cfafc05a602fa-185d242a0b83f61f.elb.ap-south-1.amazonaws.com:8080'
-          AKTO_API_KEY: ${{ secrets.AKTO_API_KEY }}
+          AKTO_DASHBOARD_URL: "<AKTO_DASHBOARD_URL>"
+          AKTO_API_KEY: "test"
           API_COLLECTION_NAME: juice_shop_demo

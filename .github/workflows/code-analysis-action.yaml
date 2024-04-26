@@ -21,6 +21,6 @@ jobs:
       - name: Akto code analysis
         uses: akto-api-security/code-analysis-action@v1
         with:
-          AKTO_DASHBOARD_URL: "<AKTO_DASHBOARD_URL>"
-          AKTO_API_KEY: "test"
+          AKTO_DASHBOARD_URL: "http://abf2b3f314fc3429ea867be6aaff6238-de0a517233fca3a1.elb.ap-south-1.amazonaws.com:8080"
+          AKTO_API_KEY: "igWcqBTRK27Yd0UC9nlpIZ9RwKtW9n5TVjB92tKu"
           API_COLLECTION_NAME: juice_shop_demo

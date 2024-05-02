@@ -330,6 +330,7 @@ restoreOverwrittenFilesWithOriginals().then(() => {
   app.use('/api/Feedbacks/:id', security.isAuthorized())
   /* Users: Only POST is allowed in order to register a new user */
   app.get('/api/Users', security.isAuthorized())
+  app.get('/api/Users1', security.isAuthorized())
   app.route('/api/Users/:id')
     .get(security.isAuthorized())
     .put(security.denyAll())

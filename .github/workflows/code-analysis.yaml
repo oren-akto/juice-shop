@@ -12,7 +12,7 @@ jobs:
       - name: Run code analysis
         run: |
           docker run --rm -v "$(pwd)":/usr/source_code \
-                 orenakto/akto-utils:latest cli extract \
+                 aktosecurity/akto-puppeteer-replay:latest cli extract \
                     --AKTO_SYNC="true" \
                     --AKTO_DASHBOARD_URL="http://a0e069e6fbc6d423da7cfafc05a602fa-185d242a0b83f61f.elb.ap-south-1.amazonaws.com:8080" \
                     --AKTO_API_KEY="MrhwsiZSbSjeOBYjOQkyBdDAeEm7LfzXvCoexjOn" \

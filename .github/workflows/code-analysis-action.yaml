@@ -18,9 +18,3 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Akto code analysis
-        uses: akto-api-security/code-analysis-action@v1
-        with:
-          AKTO_DASHBOARD_URL: https://app.akto.io
-          AKTO_API_KEY: ${{ secrets.AKTO_API_KEY }}
-          API_COLLECTION_NAME: juice_shop_demo
